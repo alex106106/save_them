@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Save</string>
+    <string name="resume">resume</string>
+    <string name="pause">pause</string>
+</resources>

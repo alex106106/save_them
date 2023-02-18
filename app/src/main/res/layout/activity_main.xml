@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleTextGPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="SAVE"
+        android:layout_gravity="center"
+        android:textSize="20sp"/>
+    <Button
+        android:visibility="gone"
+        android:id="@+id/locationControllerGPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/titleTextGPS"
+        android:text="@string/resume"
+        android:onClick="toggleGPSUpdates"/>
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/longitudeTextGPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/locationControllerGPS"
+        android:text="longitude"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/latitudeValueGPS"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/longitudeValueGPS"
+            android:layout_toRightOf="@id/longitudeTextGPS"
+            android:text="0.0000"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/longitudeValueGPS"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/locationControllerGPS"
+            android:layout_toRightOf="@id/longitudeTextGPS"
+            android:text="0.0000"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/latitudeTextGPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/longitudeTextGPS"
+        android:text="latitude"
+        android:textSize="20sp"/>
+
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewContactos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAgregarContactos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/cardview_compat_inset_shadow"
+        android:src="@drawable/ic_launcher_foreground"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnprueba"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
